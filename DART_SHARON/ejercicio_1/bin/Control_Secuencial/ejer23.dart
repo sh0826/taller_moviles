@@ -7,3 +7,24 @@
 //del embalaje se venden al detal a los precios de Bs. B3 y Bs. B4 respectivamente. 
 //Pruebe su algoritmo o programa con los sig. Valores: M=452, N=197, B1=132, B2=
 // 180, B3= 7,50 y B4= 14,50. Respuesta: 4895
+void main(){
+    double M = 452;
+    double N = 197;
+    double B1 = 132;
+    double B2 = 180; 
+    double B3= 7.50; 
+    double B4= 14.50;
+
+    int bulto = M ~/24;
+    double precioB = bulto * B1;
+    double restanteB = M % 24;
+    double ventaRestanteB = restanteB * B3;
+
+    int envase = N~/15;
+    double precioE = envase * B2;
+    double restanteE = N % 15;
+    double ventaRestanteE = restanteE * B4; 
+
+    double total = precioE+ventaRestanteE+precioB+ventaRestanteB;
+    print("el precio de todo es de: $total");
+}
